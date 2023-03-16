@@ -26,7 +26,7 @@ const validateNewText = () => {
 }
 
 
-{/* <button><img src="src/img/task.svg" alt="Edit"></button> << próxima atualização >> */}
+{/* <button><img src="assets/src/img/task.svg" alt="Edit"></button> << próxima atualização >> */}
 const showValues = () => {
     let values = JSON.parse(localStorage.getItem(localStorageKey) || '[]')
     let list = document.getElementById('to-do-list')
@@ -35,7 +35,7 @@ const showValues = () => {
         list.innerHTML += `<div class="task">
             <p>${values[i]["name"][0]}</p>
             <div>
-            <button onclick='removeItem("${values[i]["name"]}")'><img src="src/img/trash.svg" alt="delete"></button>
+            <button onclick='removeItem("${values[i]["name"]}")'><img src="assets/src/img/trash.svg" alt="delete"></button>
             </div>
         </div>`
     }
