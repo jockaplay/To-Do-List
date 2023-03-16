@@ -82,6 +82,21 @@ body {
     padding: 0 0 0 10px;
     background-color: var(--secundaryColor);
     margin-bottom: 10px;
+    box-shadow: 0px 2px 3px 0px #00000022;
+}
+
+.checked {
+    background-color: var(--primaryColor);
+    text-decoration: line-through;
+    color: var(--secundaryColor);
+}
+
+.checked p {
+    color: var(--secundaryColor) !important;
+}
+
+.checked img {
+    filter: invert();
 }
 
 .task p {
