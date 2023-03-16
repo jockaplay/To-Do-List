@@ -21,12 +21,11 @@ const validateNewText = () => {
     let values = JSON.parse(localStorage.getItem(localStorageKey) || '[]')
     let inputValue = document.getElementById('input-new-text').value
     console.log(inputValue)
-    let existe = values.find(x => x.name == (inputValue).toLowerCase())
+    let existe = values.find(x => x.name[0] == (inputValue).toLowerCase())
     return !existe ? false : true
 }
 
 
-{/* <button><img src="assets/src/img/task.svg" alt="Edit"></button> << próxima atualização >> */}
 const showValues = () => {
     let values = JSON.parse(localStorage.getItem(localStorageKey) || '[]')
     let list = document.getElementById('to-do-list')

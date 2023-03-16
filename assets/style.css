@@ -14,22 +14,21 @@
 }
 
 body {
+    display: flex;
     font-family: 'poppins';
     font-weight: 900;
     background-color: var(--background);
     color: var(--color-white);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
 
 .content {
     display: flex;
+    width: 570px;
     flex-direction: column;
-    justify-content: center;
 }
 
-.content p{
+.content p {
     text-align: center;
     font-size: x-large;
     color: var(--primaryColor);
@@ -39,14 +38,14 @@ body {
 .inputfield {
     display: flex;
     height: 2.5rem;
-    width: 400px;
+    width: 100%;
     gap: 1rem;
     margin-bottom: 1.5rem;
 }
 
 .inputfield input{
     display: flex;
-    width: 100%;
+    width: 70%;
     padding: .5rem;
     font-family: 'poppins';
     font-weight: 600;
@@ -60,23 +59,36 @@ body {
     color: var(--primaryColor);
 }
 
-.inputfield button{
+.inputfield button {
     background-color: var(--primaryColor);
     color: var(--secundaryColor);
     font-family: 'poppins';
     font-weight: 600;
-    padding: .5rem;
     border: none;
+    width: 30%;
     outline: none;
     border-radius: 6px;
     box-shadow: 0px 2px 3px 0px #00000022;
+    overflow: hidden;
     cursor: pointer;
 }
 
+.taskContainer {
+    height: 75vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.taskContainer::-webkit-scrollbar {
+    width: 0px;
+    background-color: transparent;
+}
+
 .task {
-    height: 2.5rem;
-    border-radius: 6px;
     display: flex;
+    min-height: 2.5rem;
+    width: 570px;
+    border-radius: 6px;
     align-items: center;
     justify-content: space-between;
     padding: 0 0 0 10px;
@@ -102,9 +114,10 @@ body {
 .task p {
     display: flex;
     padding: 0;
-    flex-direction: row;
+    text-align: left;
     font-size: 14px;
     color: var(--foregound);
+    word-wrap: break-word;
 }
 
 .task img {
@@ -123,4 +136,18 @@ body {
     border: none;
     background-color: transparent;
     cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .content {
+        width: 90vw;
+    }
+    .task {
+        width: 90vw;
+    }
+    .inputfield button {
+        font-size: 11px;
+        word-wrap: break-word;
+        flex-wrap: wrap;
+    }
 }
