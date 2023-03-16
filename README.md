@@ -5,4 +5,4 @@ Using localstorage to save data.
 
 Resultado:
 
-<img src="./assets/src/img/screenshot.png" style="height: 200px; border-radius: 10px"/>
+<img src="./assets/src/img/screenshot.png" style="height: 160px; border-radius: 10px"/>
