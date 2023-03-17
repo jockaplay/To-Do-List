@@ -151,3 +151,27 @@ body {
         flex-wrap: wrap;
     }
 }
+
+.swal-overlay {
+    background-color: rgba(18, 18, 18, 0.556);
+}
+
+.swal-modal {
+    background-color: var(--secundaryColor);
+    border: none;
+}
+
+.swal-text {
+    color: var(--foregound);
+}
+
+.swal-button {
+    background-color: var(--primaryColor);
+    color: var(--secundaryColor);
+    box-shadow: none !important;
+}
+
+.swal-button:hover {
+    background-color: var(--primaryColor) !important;
+    opacity: 0.7;
+}

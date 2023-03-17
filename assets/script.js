@@ -3,9 +3,9 @@ const localStorageKey = 'to-do-list'
 const newTask = () => {
     let input = document.getElementById('input-new-text')
     if (!input.value){
-        alert("Digite algo para inserir na sua lista!")
+        swal("Insira um nome para a tarefa!");
     } else if (validateNewText()) {
-        alert('Já existe uma tarefa com este nome.')
+        swal("Já existe uma tarefa com este nome.");
     } else {
         let values = JSON.parse(localStorage.getItem(localStorageKey) || '[]');
         values.push({
