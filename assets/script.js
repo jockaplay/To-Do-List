@@ -9,7 +9,7 @@ const newTask = () => {
     } else {
         let values = JSON.parse(localStorage.getItem(localStorageKey) || '[]');
         values.push({
-            name: [(input.value).toLowerCase(), false]
+            name: [(input.value), false]
         })
         localStorage.setItem(localStorageKey, JSON.stringify(values))
         showValues()
@@ -21,7 +21,7 @@ const validateNewText = () => {
     let values = JSON.parse(localStorage.getItem(localStorageKey) || '[]')
     let inputValue = document.getElementById('input-new-text').value
     console.log(inputValue)
-    let existe = values.find(x => x.name[0] == (inputValue).toLowerCase())
+    let existe = values.find(x => x.name[0] == (inputValue))
     return !existe ? false : true
 }
 
