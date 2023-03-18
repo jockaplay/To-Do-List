@@ -34,8 +34,9 @@ const showValues = () => {
         list.innerHTML += `<div class="task ${values[i]["checked"] ? "checked": ""}">
             <p>${values[i]["name"][0]}</p>
             <div>
-            <button onclick='checkItem("${values[i]["name"]}")'><img src="assets/src/img/task.svg" alt="check"></button>
-            <button onclick='removeItem("${values[i]["name"]}")'><img src="assets/src/img/trash.svg" alt="delete"></button>
+            <button onclick='checkItem("${values[i]["name"]}")'><img src="https://api.iconify.design/zondicons:checkmark.svg" alt="check"></button>
+            <button style="display: none;"><img src="https://api.iconify.design/zondicons:edit-pencil.svg" alt="check"></button>
+            <button onclick='removeItem("${values[i]["name"]}")'><img src="https://api.iconify.design/zondicons:trash.svg" alt="delete"></button>
             </div>
         </div>`
     }

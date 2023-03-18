@@ -10,7 +10,6 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -26,6 +25,7 @@ body {
     display: flex;
     width: 570px;
     flex-direction: column;
+    justify-content: center;
 }
 
 .content p {
@@ -69,7 +69,6 @@ body {
     outline: none;
     border-radius: 6px;
     box-shadow: 0px 2px 3px 0px #00000022;
-    overflow: hidden;
     cursor: pointer;
 }
 
@@ -81,13 +80,13 @@ body {
 
 .taskContainer::-webkit-scrollbar {
     width: 0px;
-    background-color: transparent;
+    height: 0px;
+    background-color: transparent !important;
 }
 
 .task {
     display: flex;
     min-height: 2.5rem;
-    width: 570px;
     border-radius: 6px;
     align-items: center;
     justify-content: space-between;
@@ -95,8 +94,8 @@ body {
     background-color: var(--secundaryColor);
     margin-bottom: 10px;
     box-shadow: 0px 2px 3px 0px #00000022;
+    transition: 0.3s;
 }
-
 .checked {
     background-color: var(--primaryColor);
     text-decoration: line-through;
@@ -112,7 +111,6 @@ body {
 }
 
 .task p {
-    display: flex;
     padding: 0;
     text-align: left;
     font-size: 14px;
@@ -143,7 +141,7 @@ body {
         width: 90vw;
     }
     .task {
-        width: 90vw;
+        width: 88vw;
     }
     .inputfield button {
         font-size: 11px;
